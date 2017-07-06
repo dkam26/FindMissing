@@ -11,6 +11,24 @@ def find_missing(list1,list2):
               Temp=0
               if i is list1[len(list1)-1]:
                   return list2[len(list2)-1]
+    elif len(list1) is 0 and len(list2) is 0:
+        return 0
+    elif len(list1) is len(list2):
+        count=0
+        coun=0
+        t=len(list1)
+        t=t-1
+        for i in range(t):
+            if list1[i] is list1[i+1]:
+                count=count+1
+                print(count)
+            if list2[i] is list2[i+1]:
+                coun=coun+1
+                print(coun)
+        if coun is len(list2) or count is len(list1):
+            return 'ty'
+
+
     else:
         
          for i in list2:
@@ -28,4 +46,4 @@ def find_missing(list1,list2):
     
 
    
-print(find_missing([1,2],[1,2,54]))
+print(find_missing([0,0,0],[6,20,44]))
