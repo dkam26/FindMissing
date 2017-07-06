@@ -7,8 +7,10 @@ def find_missing(list1,list2):
                     Temp= Temp+1
             if Temp is 0:
                 return i
-            else:
+            else: 
               Temp=0
+              if i is list1[len(list1)-1]:
+                  return list2[len(list2)-1]
     else:
         
          for i in list2:
@@ -19,6 +21,8 @@ def find_missing(list1,list2):
                 return i
             else:
               Temp=0
+              if i is list2[len(list2)-1]:
+                  return list1[len(list1)-1]
         
                 
     
